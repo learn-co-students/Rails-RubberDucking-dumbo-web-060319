@@ -1,7 +1,9 @@
 <h1>These are some cool duckys:</h1>
 
+<p> <%= link_to "Create a Duck", new_duck_path %> </p>
+
 <ul>
   <% @ducks.each do |duck| %>
-    <li> <%= duck.name %> </li>
+    <li> <%= link_to duck.name, duck %> </li>
   <% end %>
 </ul>
