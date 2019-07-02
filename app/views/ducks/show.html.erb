@@ -1,0 +1,9 @@
+<h1>Here's the duck you requested</h1>
+
+<p><b>Name:</b> <%= @duck.name %></p>
+<p><b>Description:</b> <%= @duck.description %></p>
+<p><b>Student owner:</b> <%= link_to @duck.student.name, @duck.student %></p>
+
+<li>
+  <%= link_to "Take me back to the ducks", ducks_path %>
+  <%= link_to "Can I change this duck plz", edit_duck_path(@duck) %>

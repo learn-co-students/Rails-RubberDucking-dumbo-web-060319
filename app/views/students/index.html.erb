@@ -2,6 +2,8 @@
 
 <ul>
   <% @students.each do |student| %>
-    <li> <%= student.name %> </li>
+    <li> <%= link_to student.name, student_path(student) %> </li>
   <% end %>
 </ul>
+<p><%= link_to "Create a student", new_student_path %></p>
+<%= link_to "Lemme see dem ducks", ducks_path %>

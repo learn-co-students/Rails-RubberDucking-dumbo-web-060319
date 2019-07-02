@@ -1,0 +1,13 @@
+<h1>Here's the student you wanted to see</h1>
+
+<p><b>Name:</b> <%= @student.name %></p>
+<p><b>Mod:</b> <%= @student.mod %></p>
+
+<h3>Here's their ducks</h3>
+  <% @student.ducks.each do |duck| %>
+    <li>
+      <%= duck.name %> - <%= link_to duck.name, duck %>
+    </li>
+  <% end %>
+<p><%= link_to "Lemme change dis student", edit_student_path(@student) %>
+<p><%= link_to "Take me back to the students", students_path %>
